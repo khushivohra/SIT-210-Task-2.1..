@@ -4,10 +4,10 @@ const int ledPin = 13;
 int buttonState = 0;
 int lastButtonState = 0;
 bool blinking = false;
-const char* name = "KHUSHI"; // Change this to your first name
+const char* name = "KHUSHI"; 
 int nameLength = strlen(name);
 
-// Define Morse code for each letter (A-Z)
+// Defining MorseCode for each letter (A-Z)
 const char* morseCode[] = {
  ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."  
 };
@@ -22,7 +22,7 @@ void loop() {
 
   if (buttonState != lastButtonState) {
     if (buttonState == HIGH) {
-      blinking = !blinking; // Toggle blinking state
+      blinking = !blinking; 
       if (blinking) {
         blinkName();
       } else {
@@ -49,10 +49,10 @@ void blinkName() {
             delay(600); // Dash duration
           }
           digitalWrite(ledPin, LOW);
-          delay(200); // Gap between dots and dashes
+          delay(200); 
         }
       }
-      delay(600); // Gap between letters
+      delay(600); 
     }
   }
 }
